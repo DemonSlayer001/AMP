@@ -21,7 +21,7 @@ def gradient(theta, X, y):
 	'''' calculate gradient descent for logistic regression'''
 	m = y.size
     theta=theta.reshape(-1,1)
-	h = sigmoid(np.dot(X,theta.reshape(-1,1)))
+	h = sigmoid(np.dot(X,theta))
     
 	grad = (1/m)*X.T.dot(h-y)
 
